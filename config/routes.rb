@@ -1,5 +1,5 @@
 TestApp::Application.routes.draw do
-  get "items/new"
+  resources :items
   
   match '/create',  :to => 'items#new'
 

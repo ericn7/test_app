@@ -1,0 +1,17 @@
+<table class="profile" summary="Profile information">
+  <tr>
+	<td class="main">
+	  <h1>
+		<%= @item.title %>
+	  </h1>
+	</td>
+	<td class="sidebar round">
+	  <strong>Title</strong> <%= @item.title %><br />
+	  <strong>URL</strong>  <%= link_to item_path(@item), @item %>
+	  <strong>Edit</strong> <li><%= link_to "Edit", edit_item_path(@item) %>
+	</td>
+  </tr>
+</table>
+
+
+

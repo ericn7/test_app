@@ -1,0 +1,16 @@
+<h1>Edit Item</h1>
+
+<%= form_for(@item) do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <div class="field">
+	<%= f.label :title %><br />
+	<%= f.text_field :title %>
+  </div>
+  <div class="field">
+	<%= f.label :sort %><br />
+	<%= f.text_field :sort %>
+  <div class="actions">
+	<%= f.submit "Update" %>
+  </div>
+<% end %>
+

@@ -1,2 +1,16 @@
-<h1>Items#new</h1>
-<p>Find me in app/views/items/new.html.erb</p>
+<h1>New Item</h1>
+
+<%= form_for(@item) do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <div class="field">
+	<%= f.label :title %><br />
+	<%= f.text_field :title %>
+  </div>
+  <div class="field">
+	<%= f.label :sort %><br />
+	<%= f.text_field :sort %>
+  </div>
+  <div class="actions">
+	<%= f.submit "Create Item" %>
+  </div>
+<% end %>
