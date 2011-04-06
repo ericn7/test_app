@@ -1,4 +1,8 @@
 TestApp::Application.routes.draw do
+  get "items/new"
+  
+  match '/create',  :to => 'items#new'
+
   match '/contact', :to => 'pages#contact'
 
   root :to => 'pages#home'
