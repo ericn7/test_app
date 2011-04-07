@@ -1,11 +1,7 @@
 <header>
 
-  <%= image_tag("logo.png", :alt => "Sample App", :class => "round") %>
+  <%= image_tag("http://profile.ak.fbcdn.net/hprofile-ak-snc4/50254_340377697003_6059318_n.jpg", :alt => "Sample App", :class => "round") %>
   <nav class="round">
-	<ul>
-	  <li><%= link_to "Home", root_path %></li>
-	  <li><%= link_to "Items", items_path %></li>
-	  <li><%= link_to "Blank Link", '#' %></li>
-	</ul>
+    <%= render 'shared/modules' %>
   </nav>
 </header>
