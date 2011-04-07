@@ -1,9 +1,16 @@
 <h1>All items</h1>
 
-<ul class="items">
+<ul id="items">
   <% @items.each do |item| %>
-	<li>
-	  <%= link_to item.title, item %>
-	</li>
+
+
+	<% content_tag_for :li, item do %> 
+ 	<span class="handle">[drag]</span>
+	  <%= link_to item.title, item %> 
+
+	<% end %>  
+
   <% end %>
 </ul>
+<%= sortable_element("items", :url => sort_items_path, :handle => "handle") %> 
+

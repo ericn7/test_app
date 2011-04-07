@@ -1,5 +1,6 @@
 class Item < ActiveRecord::Base
-  attr_accessible :title, :sort
+  #acts_as_list
+  attr_accessible :title, :position
 
   validates :title, :presence => true
 end

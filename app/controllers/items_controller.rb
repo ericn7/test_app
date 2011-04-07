@@ -40,5 +40,16 @@ class ItemsController < ApplicationController
       render 'edit'
     end
   end
+  
+def sort
+  params[:items].each_with_index do |id, index|  
+    Item.update_all(['position=?', index+1], ['id=?', id])  
+  end  
+  render :nothing => true  
+end 
+
+def index  
+  @items = Item.all(:order => 'position')  
+end  
 
 end

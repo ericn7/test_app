@@ -1,9 +1,19 @@
 TestApp::Application.routes.draw do
-  resources :items
+  #resources :items
   
   match '/create',  :to => 'items#new'
 
   match '/contact', :to => 'pages#contact'
+  
+  #resources :items, :collection => { :sort => :post} 
+  
+  resources :items do
+    collection do
+      post :sort
+    end
+  end
+  
+
 
   root :to => 'pages#home'
 
